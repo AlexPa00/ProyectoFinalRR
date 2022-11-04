@@ -9,6 +9,8 @@ TagManager:
   - Punto4
   - Punto
   - Plano
+  - Fluid
+  - Premio4
   layers:
   - Default
   - TransparentFX
