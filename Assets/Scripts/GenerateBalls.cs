@@ -19,7 +19,7 @@ public class GenerateBalls : MonoBehaviour
 
     public void GenerateEnemy()
     {
-        Instantiate(enemy1,new Vector3(Random.Range(2.91f, -2.34f), transform.position.y,-17.05f), transform.rotation);
+        Instantiate(enemy1,new Vector3(Random.Range(3.61f, -2.83f), transform.position.y,-15.80f), transform.rotation);
         
     }
 }
