@@ -31,12 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
       if(Input.GetKeyDown(KeyCode.Space)) //Una vez que presionemos la barra espaciadora...
       {
-            physicBody.mass = 1;
         physicBody.AddForce(Vector3.up*jump,ForceMode.Impulse); //Al rigidbody del Player , le asigno un vector up y le multiplico por la fuerza de 4 unidades en el eje Y .. el impulse simula un salto.
       }
-        else
-        {
-            physicBody.mass = 50;
-        }
     }
 }

@@ -24,6 +24,15 @@ public class Obstacle : MonoBehaviour
         {
         break;
         }
+        case 3:
+        {
+            Destroy(gameObject,3f); //Cada vez que un Obstaculo3 se instancie , este se destruira al cumplir los 9 segundos(Al llegar al final del plano).
+        break; 
+        }
+         case 4:
+        {
+        break;
+        }
     }
     }
 
@@ -51,6 +60,16 @@ public class Obstacle : MonoBehaviour
                  }
                 transform.Translate(0,0,speedZ*Time.deltaTime); //Hara que el obstaculo2 se mueva de izquierda a derecha en el eje "z".
                 break;
+            }
+            case 3:
+            {
+                transform.Translate(speedObstacle1*Time.deltaTime,0,0); //Hara que el obstaculo3 se mueva hacia un lado en el eje "x".
+            break;
+            }
+             case 4:
+            {
+                transform.Translate(0,speedObstacle1*Time.deltaTime,0); //Hara que el obstaculo4 se mueva hacia abajo en el eje "y".
+            break;
             }
         }
     }
