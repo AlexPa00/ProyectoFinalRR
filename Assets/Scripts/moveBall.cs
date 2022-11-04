@@ -12,7 +12,7 @@ public class moveBall : MonoBehaviour
     void Update()
     {
         transform.Rotate(speedZ * Time.deltaTime, 0, 0);
-        if (transform.position.x > -4f)
+        if (transform.position.z > -5f)
         {
             Destroy(gameObject);
         }
