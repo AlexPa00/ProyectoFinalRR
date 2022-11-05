@@ -5,19 +5,19 @@ using UnityEngine.AI;
 
 public class NavMeshCalabaza : MonoBehaviour
 {
-    public Transform objetivo;
+    public Transform objetivo; // se colocara en Objetico que seguira
     private NavMeshAgent agente;
 
-    // Start is called before the first frame update
     void Start()
     {
         agente = GetComponent<NavMeshAgent>();
-        
+        // Le asignaremos a la variable agente el componente que queremos acceder "NavMeshAgent"
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         agente.destination = objetivo.position;
+        // Dentro del metodo Update constantemente estara buscando el objetivo
     }
 }
