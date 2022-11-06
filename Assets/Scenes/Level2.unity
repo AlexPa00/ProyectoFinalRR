@@ -2187,6 +2187,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &513160760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773377472257740666, guid: ae223b21e5d3206419603b794c3013ee, type: 3}
+  m_PrefabInstance: {fileID: 1758937474}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &525975621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 435724, guid: edd46fc5182e0d44c98fa6c5305dabb0, type: 3}
@@ -4760,6 +4765,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6965737169189213632, guid: ae223b21e5d3206419603b794c3013ee, type: 3}
   m_PrefabInstance: {fileID: 1758937474}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1204755064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513160760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d1518d91541f04c96cec8f9bbe63db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1227543349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3872001226836439029, guid: 1f9416082698e614ebb7003c2d80098b, type: 3}
@@ -7997,6 +8014,10 @@ PrefabInstance:
     - target: {fileID: 7773377472257740666, guid: ae223b21e5d3206419603b794c3013ee, type: 3}
       propertyPath: m_Name
       value: terrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773377472257740666, guid: ae223b21e5d3206419603b794c3013ee, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 8133617269312712367, guid: ae223b21e5d3206419603b794c3013ee, type: 3}
       propertyPath: m_Materials.Array.data[0]
