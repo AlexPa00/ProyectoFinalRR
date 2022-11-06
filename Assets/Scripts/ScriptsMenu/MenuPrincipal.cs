@@ -16,6 +16,7 @@ public class MenuPrincipal : MonoBehaviour
    public AudioSource fxSource;
    public AudioSource masterSource;
    public AudioClip clickSound;
+   private float lastVolume; 
    [Header("Panels")]
    public GameObject mainPanel;
    public GameObject optionsPanel;
@@ -27,7 +28,19 @@ public class MenuPrincipal : MonoBehaviour
       volumeMaster.onValueChanged.AddListener(ChangeVolumeMaster);
    }
 
-   public void PlayLevel(string levelName)
+   public void SetMute() //Funcion para activar el mute de musica de fondo
+   {
+    
+     if(mute.isOn) //Si el mute esta encendido sucede esto
+    {
+       mixer.GetFloat("VolMaster" , out lastVolume);
+        mixer.SetFloat("VolMaster" , -80);
+    }
+      else
+      mixer.SetFloat("VolMaster" , lastVolume);
+   }
+
+   public void PlayLevel(string levelName) //Funcion para la seleccion de niveles
    {
      SceneManager.LoadScene(levelName);
    }
@@ -42,17 +55,17 @@ public class MenuPrincipal : MonoBehaviour
     PlaySoundButton(); 
    }
 
-   public void ChangeVolumeMaster (float v) //Funsion que seteamos lo que queremos
+   public void ChangeVolumeMaster (float v) //Funcion que seteamos lo que queremos
    {
      mixer.SetFloat("VolMaster" ,v);
    }
 
-    public void ChangeVolumeFX (float v)
+    public void ChangeVolumeFX (float v) //Funcion donde colocamos que queremos que suceda
    {
      mixer.SetFloat("VolFX" ,v);
    }
 
-   public void PlaySoundButton()
+   public void PlaySoundButton() //Funcion para el sonido de los botones
     {
       fxSource.PlayOneShot(clickSound);
       masterSource.PlayOneShot(clickSound);
