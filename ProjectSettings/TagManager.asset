@@ -11,6 +11,8 @@ TagManager:
   - Plano
   - Fluid
   - Premio4
+  - Wall
+  - Terrain
   layers:
   - Default
   - TransparentFX
