@@ -45,23 +45,6 @@ public class GeneratorObstacle : MonoBehaviour
                 }
                 break;
             }
-
-            //Nivel 4
-
-            case 3:
-            {
-                Instantiate(obstacle,transform.position,transform.rotation); //Instanciamos el objeto a clonar que en este caso es el obstaculo3, en la posicion y rotacion del generador 3.
-                break;
-            }
-            case 4:
-            {
-                if(cantidadObstacle2 <= 7) //Si la cantidad de obstaculo4 es menor o igual a 7 entonces se ejecutara este condicional,lo que nos permite crear solamente 8 obstaculo4 en el Generador4.
-                {
-                Instantiate(obstacle,transform.position,transform.rotation); //Instanciamos el objeto a clonar que en este caso es el obstaculo4, en la posicion y rotacion del generador 4.
-                cantidadObstacle2++; 
-                }
-                break;
-            }
         } 
     }
 
@@ -81,22 +64,6 @@ public class GeneratorObstacle : MonoBehaviour
              case 2:
             {
                 break; //El Generador2 no se movera.
-            }
-
-            //Nivel 4
-            
-            case 3:
-            {
-                break; //El Generador3 no se movera.
-            }
-            case 4:
-            {
-                if(transform.position.x < 36.8f || transform.position.x > 42.2f)
-                 {
-                  speedZ *= -1;
-                 }
-                transform.Translate(0,0,speedZ*Time.deltaTime); //Hara que el Generador4 se mueva de izquierda a derecha en el eje "x".
-                break;
             }
         }
     } 
