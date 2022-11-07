@@ -71,7 +71,7 @@ public class Obstacle : MonoBehaviour
     {
          switch(obstacleType)
         {
-            //Nivel 1
+            //Nivel 1 --
 
             case 1:
             {

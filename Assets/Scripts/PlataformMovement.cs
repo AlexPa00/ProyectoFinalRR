@@ -63,7 +63,7 @@ public class PlataformMovement : MonoBehaviour
             break;
             }
 
-            //Nivel 4
+            //Nivel 4 --
             
             case 4:
             {

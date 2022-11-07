@@ -83,7 +83,7 @@ public class GeneratorObstacle : MonoBehaviour
                 break; //El Generador2 no se movera.
             }
 
-            //Nivel 4
+            //Nivel 4 --
             
             case 3:
             {
