@@ -10,5 +10,9 @@ public class GameOver3 : MonoBehaviour
   {
         SceneManager.LoadScene("Level3");
   }
+    public void RestartMainMenu()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
 
 }
