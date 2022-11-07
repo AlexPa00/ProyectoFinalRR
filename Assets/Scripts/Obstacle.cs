@@ -38,6 +38,11 @@ public class Obstacle : MonoBehaviour
     {
          switch(obstacleType)
         {
+
+            //Nivel 1 --
+
+
+
             case 1:
             {
             transform.Translate(speedObstacle1*Time.deltaTime,0,0); //Hara que el obstaculo1 se mueva hacia adelante en el eje "x".
@@ -52,6 +57,53 @@ public class Obstacle : MonoBehaviour
                 transform.Translate(0,0,speedZ*Time.deltaTime); //Hara que el obstaculo2 se mueva de izquierda a derecha en el eje "z".
                 break;
             }
+
+
+            //Nivel 4 -- Calabazas(case3), Fantasmas y bruja(case4).
+            case 3:
+            {
+                transform.Translate(speedObstacle1*Time.deltaTime,0,0); //Hara que el obstaculo3 se mueva hacia un lado en el eje "x".
+            break;
+            }
+            case 4:
+            {
+            if(transform.position.z > -5.34f || transform.position.z < -15.5f)
+                 {
+                  speedZ *= -1;
+                 }
+                transform.Translate(0,0,speedZ*Time.deltaTime); //Hara que el obstaculo5 se mueva de izquierda a derecha en el eje "z".
+                break;
+            }
+
+            //Paredes Moviles -- Nivel 4
+
+            case 5:
+            {
+            if(transform.position.y > 12.58f || transform.position.y < 8.84f)
+                 {
+                  speedParedType5 *= -1;
+                 }
+                transform.Translate(0,speedParedType5*Time.deltaTime,0); //Hara que el obstaculo6 se mueva de arriba hacia abajo en el eje "y".
+                break;
+            }
+             case 6:
+            {
+            if(transform.position.z > -7.49f || transform.position.z < -16.67f)
+                 {
+                  speedParedType6 *= -1;
+                 }
+                transform.Translate(0,0,speedParedType6*Time.deltaTime); //Hara que el obstaculo7 se mueva de izquierda a derecha en el eje "z".
+                break;
+            }
+            case 7:
+            {
+                transform.Translate(0,speedParedType7*Time.deltaTime,0); //Hara que el obstaculo7 se mueva de izquierda a derecha en el eje "z".
+                break;
+            }
+
+
         }
+        
     }
+
 }
