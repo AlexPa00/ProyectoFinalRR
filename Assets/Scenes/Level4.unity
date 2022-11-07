@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.050741248, g: 0.061353035, b: 0.12912491, a: 1}
+  m_IndirectSpecularColor: {r: 0.050741293, g: 0.061353117, b: 0.129125, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1468,7 +1468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43286022}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 55.9, y: 1.918, z: -17.98}
+  m_LocalPosition: {x: 55.9, y: 2.12, z: -17.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13786,10 +13786,6 @@ MonoBehaviour:
   speedPlataform1X: 2
   speedPlataform2X: -2
   speedPlataform3: 1
-  speedPlataform4: 1
-  speedPlataform5: 1
-  speedPlataform6: 2
-  speedPlataform7: 2.5
 --- !u!1001 &409330062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14222,10 +14218,6 @@ MonoBehaviour:
   speedPlataform1X: 2
   speedPlataform2X: -2
   speedPlataform3: 1
-  speedPlataform4: 1
-  speedPlataform5: 1
-  speedPlataform6: 2
-  speedPlataform7: 2.5
 --- !u!1001 &437861120
 PrefabInstance:
   m_ObjectHideFlags: 0
