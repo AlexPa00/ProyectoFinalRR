@@ -99,6 +99,7 @@ public class GeneratorObstacle : MonoBehaviour
                 break;
             }
         }
+        
     } 
 
 }

@@ -119,5 +119,4 @@ public class PlataformMovement : MonoBehaviour
             collision.gameObject.transform.SetParent(null);
           }
        }
-
 }

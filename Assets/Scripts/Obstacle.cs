@@ -129,6 +129,9 @@ public class Obstacle : MonoBehaviour
                 transform.Translate(0,speedParedType7*Time.deltaTime,0); //Hara que el obstaculo7 se mueva de izquierda a derecha en el eje "z".
                 break;
             }
+
         }
+        
     }
+
 }
