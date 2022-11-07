@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlataformMovement : MonoBehaviour
 {
+   //Nivel 1
     [SerializeField]
     private int plataformType; //Nos sirve para indicar el tipo de plataforma .
     [SerializeField]
@@ -12,6 +13,17 @@ public class PlataformMovement : MonoBehaviour
     private float speedPlataform2X = -2f; //Velocidad de plataforma2.
     [SerializeField]
     private float speedPlataform3 = 1f; //Velocidad de plataforma3.
+
+    //Nivel 4
+
+    [SerializeField]
+    private float speedPlataform4 = 1f; //Velocidad de plataforma4.
+    [SerializeField]
+    private float speedPlataform5 = 1f; //Velocidad de plataforma5.
+    [SerializeField]
+    private float speedPlataform6 = 2f; //Velocidad de plataforma6.
+     [SerializeField]
+    private float speedPlataform7 = 2.5f; //Velocidad de plataforma7.
 
     // Update is called once per frame
     void Update()
@@ -51,7 +63,6 @@ public class PlataformMovement : MonoBehaviour
             break;
             }
 
-
             //Nivel 4 --
             
             case 4:
@@ -90,7 +101,6 @@ public class PlataformMovement : MonoBehaviour
             transform.Translate(speedPlataform7*Time.deltaTime,0,0); //Hara que la plataforma7 se mueva hacia adelante y atras en el eje "x".
             break;
             }
-
         }
     }
 
