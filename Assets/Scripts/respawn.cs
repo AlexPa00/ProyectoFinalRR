@@ -12,7 +12,7 @@ public class respawn : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Game Over");
+            SceneManager.LoadScene("Game Over2");
         }
 
     }
