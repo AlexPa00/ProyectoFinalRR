@@ -10,6 +10,10 @@ public class GameOver4 : MonoBehaviour
   {
         SceneManager.LoadScene("Level4");
   }
+    public void RestartMainMenu()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
 
 }
 
