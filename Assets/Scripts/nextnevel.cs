@@ -11,9 +11,6 @@ public class nextnevel : MonoBehaviour
         {
             SceneManager.LoadScene("Level3");
         }
-        if (collision.gameObject.tag == "Player")
-        {
-            SceneManager.LoadScene("Level4");
-        }
+      
     }
 }
