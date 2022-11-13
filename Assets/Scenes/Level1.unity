@@ -1263,7 +1263,6 @@ GameObject:
   - component: {fileID: 55235512}
   - component: {fileID: 55235511}
   - component: {fileID: 55235510}
-  - component: {fileID: 55235514}
   m_Layer: 0
   m_Name: ESF3
   m_TagString: Untagged
@@ -1279,7 +1278,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55235509}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -1349,18 +1348,6 @@ Transform:
   m_Father: {fileID: 1901857622}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &55235514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55235509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 075e515285bc8f64d89876c0110e80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &55710175 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4667380264713814, guid: 3793ad411fa918d4685c2c4c1494c970, type: 3}
@@ -9166,7 +9153,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.7
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2

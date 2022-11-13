@@ -24,7 +24,7 @@ public class PersonajeGameOver : MonoBehaviour
         {
             case 1:
             {
-            transform.Rotate(0,speedY*Time.deltaTime,0) ; //El player1 rotara con respecto al eje "x".
+            
             break;
             }
             case 2:
