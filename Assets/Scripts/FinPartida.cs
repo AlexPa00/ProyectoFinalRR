@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinPartida : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class FinPartida : MonoBehaviour
         {
             Debug.Log("FELICIDADES , FIN DE PARTIDA"); //Se mostrara por consola el siguiente mensaje.
             finPartida.SetActive(true); //Se activaran las particulas.
+            SceneManager.LoadScene("Level2");
         }
     }
      void OnCollisionExit(Collision collision) //Si ya no se detecta colision...
