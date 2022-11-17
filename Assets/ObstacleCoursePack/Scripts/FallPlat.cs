@@ -12,16 +12,16 @@ public class FallPlat : MonoBehaviour
 		foreach (ContactPoint contact in collision.contacts)
 		{
 			//Debug.DrawRay(contact.point, contact.normal, Color.white);
-			if (collision.gameObject.tag == "Player")
+			if (collision.gameObject.tag == "Player") // al entrar en colision el objeto con el tag player
 			{
-				StartCoroutine(Fall(fallTime));
+				StartCoroutine(Fall(fallTime));  // entra en una corrutina
 			}
 		}
 	}
 
-	IEnumerator Fall(float time)
+	IEnumerator Fall(float time) //función declarada con un tipo de retorno
 	{
-		yield return new WaitForSeconds(time);
-		Destroy(gameObject);
+		yield return new WaitForSeconds(time); // es un interrupcion en la que tambien xe le puede asugnar un retardo	
+		Destroy(gameObject); //se destruye el objeto
 	}
 }

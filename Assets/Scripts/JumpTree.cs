@@ -2,21 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class JumpTree : MonoBehaviour
 {
+    private float jump;
+    // Start is called before the first frame update
     private float speed; //Nos sirve para indicar la velocidad de movimiento del Player.
     private float speedRotation;
-    private float jump;
     private Rigidbody physicBody; //Permite detectar cuando el Player colisiona con otro cuerpo fisico.
- 
+
 
     // Start is called before the first frame update
     void Start()
     {
-    speed =5f;
-    speedRotation=1000f;
-    jump=5f;
-    physicBody= GetComponent<Rigidbody>();
+        speed = 5f;
+        speedRotation = 1000f;
+        jump = 5f;
+        physicBody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -30,6 +31,14 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(new Vector3(posX, 0, posZ) * speed * Time.deltaTime);
         transform.Rotate(new Vector3(0, rotationY, 0) * speedRotation * Time.deltaTime);
 
-     
+        if (Input.GetKeyDown(KeyCode.Space)) //Una vez que presionemos la barra espaciadora...
+        {
+            physicBody.mass = 1;
+            physicBody.AddForce(Vector3.up * jump, ForceMode.Impulse); //Al rigidbody del Player , le asigno un vector up y le multiplico por la fuerza de 4 unidades en el eje Y .. el impulse simula un salto.
+        }
+        else
+        {
+            physicBody.mass = 50;
+        }
     }
 }

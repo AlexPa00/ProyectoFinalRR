@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class WallMovable : MonoBehaviour
 {
-	public bool isDown = true; //If the wall starts down, if not you must modify to false
-	public bool isRandom = true; //If you want that the wall go down random
+	//INICIALIZAMOS LAS VARAIBLES
+
+	public bool isDown = true; 
+	public bool isRandom = true; 
 	public float speed = 2f;
 
-	private float height; //Height of the platform
-	private float posYDown; //Start position of the Y coord
-	private bool isWaiting = false; //If the wall is waiting up or down
-	private bool canChange = true; //If the wall is thinking if should go down or not
+	private float height; 
+	private float posYDown; 
+	private bool isWaiting = false; 
+	private bool canChange = true; 
 
+	
+	//METODO DE INICIALIZACION
 	void Awake()
     {
-		height = transform.localScale.y;
+		height = transform.localScale.y; // la variable height toma un nuevo valor
 		if(isDown)
-			posYDown = transform.position.y;
+			posYDown = transform.position.y; // si se cumple la condicion posyDown toma una nueva variable
 		else
-			posYDown = transform.position.y - height;
+			posYDown = transform.position.y - height; // si no se cumple ninguna de las condiciones posYdown toma un nuevo valor
 	}
 
     // Update is called once per frame
@@ -29,22 +33,22 @@ public class WallMovable : MonoBehaviour
 		{
 			if (transform.position.y < posYDown + height)
 			{
-				transform.position += Vector3.up * Time.deltaTime * speed;
+				transform.position += Vector3.up * Time.deltaTime * speed; // si se cumple estas condicion ira subiendo de posicion y 
 			}
 			else if (!isWaiting)
-				StartCoroutine(WaitToChange(0.25f));
+				StartCoroutine(WaitToChange(0.25f)); // si se cumple esta condicion inicia una corrutina
 		}
 		else
 		{
-			if (!canChange)
+			if (!canChange) //Si no se cumple ninguna de las condicionesa anteriores reentornara
 				return;
 
 			if (transform.position.y > posYDown)
 			{
-				transform.position -= Vector3.up * Time.deltaTime * speed;
+				transform.position -= Vector3.up * Time.deltaTime * speed; // bajara la posicion del objeto en Y
 			}
 			else if (!isWaiting)
-				StartCoroutine(WaitToChange(0.25f));
+				StartCoroutine(WaitToChange(0.25f)); // incializa una corrutina
 		}
 	}
 
